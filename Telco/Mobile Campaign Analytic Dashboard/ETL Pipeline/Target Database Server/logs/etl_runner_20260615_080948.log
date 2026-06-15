@@ -1,0 +1,81 @@
+[2026-06-15 08:09:48] ============================================================
+[2026-06-15 08:09:48] ETL RUNNER STARTED
+[2026-06-15 08:09:48] Working directory : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script
+[2026-06-15 08:09:48] Runner log        : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_runner_20260615_080948.log
+[2026-06-15 08:09:48] Arguments         : --date 2026-03-15 
+[2026-06-15 08:09:48] ============================================================
+[2026-06-15 08:09:48] 
+[2026-06-15 08:09:49] ▶ Running : etl_top_main_level_mtd.py
+[2026-06-15 08:09:49]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_mtd_20260615_080948.log
+2026-06-15 08:09:49,383 [INFO] ============================================================
+2026-06-15 08:09:49,383 [INFO] START SYNC  |  d_date=2026-03-15  |  strategy=upsert
+2026-06-15 08:09:49,383 [INFO]   Source : cvm_data.top_main_level_mtd  @  10.54.18.204
+2026-06-15 08:09:49,383 [INFO]   Target : cvm.top_main_level_mtd  @  localhost
+2026-06-15 08:09:49,383 [INFO] ============================================================
+2026-06-15 08:09:49,691 [INFO] Fetching source data for d_date = 2026-03-15 ...
+2026-06-15 08:09:49,724 [INFO]   → 33 rows fetched from source.
+2026-06-15 08:09:49,741 [INFO]   → Upserted batch 1: 33/33 rows
+2026-06-15 08:09:49,742 [INFO] SYNC COMPLETE  |  33 rows synced for d_date=2026-03-15
+[2026-06-15 08:09:49]   [OK] etl_top_main_level_mtd.py completed in 0s
+[2026-06-15 08:09:49] 
+[2026-06-15 08:09:49] ▶ Running : etl_top_main_level_l1_mtd.py
+[2026-06-15 08:09:50]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_l1_mtd_20260615_080948.log
+2026-06-15 08:09:50,339 [INFO] ============================================================
+2026-06-15 08:09:50,339 [INFO] START SYNC  |  d_date=2026-03-15  |  strategy=upsert
+2026-06-15 08:09:50,340 [INFO]   Source : cvm_data.top_main_level_l1_mtd  @  10.54.18.204
+2026-06-15 08:09:50,340 [INFO]   Target : cvm.top_main_level_l1_mtd  @  localhost
+2026-06-15 08:09:50,340 [INFO] ============================================================
+2026-06-15 08:09:50,639 [INFO] Fetching source data for d_date = 2026-03-15 ...
+2026-06-15 08:09:50,678 [INFO]   → 0 rows fetched from source.
+2026-06-15 08:09:50,684 [WARNING] No data found in source for d_date=2026-03-15. Exiting.
+[2026-06-15 08:09:50]   [OK] etl_top_main_level_l1_mtd.py completed in 0s
+[2026-06-15 08:09:50] 
+[2026-06-15 08:09:50] ▶ Running : etl_summary_channel_mtd.py
+[2026-06-15 08:09:51]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_summary_channel_mtd_20260615_080948.log
+2026-06-15 08:09:51,295 [INFO] ============================================================
+2026-06-15 08:09:51,303 [INFO] START SYNC  |  d_date=2026-03-15  |  strategy=upsert
+2026-06-15 08:09:51,303 [INFO]   Source : cvm_data.summary_channel_mtd  @  10.54.18.204
+2026-06-15 08:09:51,303 [INFO]   Target : cvm.summary_channel_mtd  @  localhost
+2026-06-15 08:09:51,303 [INFO] ============================================================
+2026-06-15 08:09:51,580 [INFO] Fetching source data for d_date = 2026-03-15 ...
+2026-06-15 08:09:51,639 [INFO]   → 94 rows fetched from source.
+2026-06-15 08:09:51,655 [ERROR] Error during sync: 'revenue/taker'
+Traceback (most recent call last):
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 184, in sync_by_d_date
+    inserted = upsert_target_data(tgt_conn, rows)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 147, in upsert_target_data
+    psycopg2.extras.execute_batch(cur, query, batch, page_size=batch_size)
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in execute_batch
+    sqls = [cur.mogrify(sql, args) for args in page]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in <listcomp>
+    sqls = [cur.mogrify(sql, args) for args in page]
+            ^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'revenue/taker'
+2026-06-15 08:09:51,678 [INFO] Target transaction rolled back.
+Traceback (most recent call last):
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 260, in <module>
+    sync_by_d_date(d_date=args.date, strategy=args.strategy)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 184, in sync_by_d_date
+    inserted = upsert_target_data(tgt_conn, rows)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 147, in upsert_target_data
+    psycopg2.extras.execute_batch(cur, query, batch, page_size=batch_size)
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in execute_batch
+    sqls = [cur.mogrify(sql, args) for args in page]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in <listcomp>
+    sqls = [cur.mogrify(sql, args) for args in page]
+            ^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'revenue/taker'
+[2026-06-15 08:09:51]   [FAILED] etl_summary_channel_mtd.py failed after 0s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_summary_channel_mtd_20260615_080948.log
+[2026-06-15 08:09:51] 
+[2026-06-15 08:09:51] ============================================================
+[2026-06-15 08:09:52] ETL RUNNER FINISHED
+[2026-06-15 08:09:52]   Total   : 3
+[2026-06-15 08:09:52]   Success : 2
+[2026-06-15 08:09:52]   Failed  : 1
+[2026-06-15 08:09:52]   Failed scripts:
+[2026-06-15 08:09:52]     - etl_summary_channel_mtd.py
+[2026-06-15 08:09:52] ============================================================

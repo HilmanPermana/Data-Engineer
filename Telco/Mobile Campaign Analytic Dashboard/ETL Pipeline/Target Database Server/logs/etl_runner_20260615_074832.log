@@ -1,0 +1,32 @@
+[2026-06-15 07:48:32] ============================================================
+[2026-06-15 07:48:32] ETL RUNNER STARTED
+[2026-06-15 07:48:32] Working directory : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script
+[2026-06-15 07:48:33] Runner log        : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_runner_20260615_074832.log
+[2026-06-15 07:48:33] Arguments         : --date 2026-03-31 
+[2026-06-15 07:48:33] ============================================================
+[2026-06-15 07:48:33] 
+[2026-06-15 07:48:33] ▶ Running : etl_top_main_level_mtd.py
+[2026-06-15 07:48:33]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_mtd_20260615_074832.log
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[2026-06-15 07:48:33]   [FAILED] etl_top_main_level_mtd.py failed after 0s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_mtd_20260615_074832.log
+[2026-06-15 07:48:33] 
+[2026-06-15 07:48:33] ▶ Running : etl_top_main_level_l1_mtd.py
+[2026-06-15 07:48:34]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_l1_mtd_20260615_074832.log
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[2026-06-15 07:48:34]   [FAILED] etl_top_main_level_l1_mtd.py failed after 0s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_l1_mtd_20260615_074832.log
+[2026-06-15 07:48:34] 
+[2026-06-15 07:48:34] ▶ Running : etl_summary_channel_mtd.py
+[2026-06-15 07:48:34]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_summary_channel_mtd_20260615_074832.log
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[2026-06-15 07:48:35]   [FAILED] etl_summary_channel_mtd.py failed after 1s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_summary_channel_mtd_20260615_074832.log
+[2026-06-15 07:48:35] 
+[2026-06-15 07:48:35] ============================================================
+[2026-06-15 07:48:35] ETL RUNNER FINISHED
+[2026-06-15 07:48:35]   Total   : 3
+[2026-06-15 07:48:35]   Success : 0
+[2026-06-15 07:48:35]   Failed  : 3
+[2026-06-15 07:48:35]   Failed scripts:
+[2026-06-15 07:48:35]     - etl_top_main_level_mtd.py
+[2026-06-15 07:48:35]     - etl_top_main_level_l1_mtd.py
+[2026-06-15 07:48:35]     - etl_summary_channel_mtd.py
+[2026-06-15 07:48:35] ============================================================

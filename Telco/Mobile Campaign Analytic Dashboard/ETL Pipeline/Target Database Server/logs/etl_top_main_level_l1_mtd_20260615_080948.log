@@ -1,0 +1,8 @@
+2026-06-15 08:09:50,339 [INFO] ============================================================
+2026-06-15 08:09:50,339 [INFO] START SYNC  |  d_date=2026-03-15  |  strategy=upsert
+2026-06-15 08:09:50,340 [INFO]   Source : cvm_data.top_main_level_l1_mtd  @  10.54.18.204
+2026-06-15 08:09:50,340 [INFO]   Target : cvm.top_main_level_l1_mtd  @  localhost
+2026-06-15 08:09:50,340 [INFO] ============================================================
+2026-06-15 08:09:50,639 [INFO] Fetching source data for d_date = 2026-03-15 ...
+2026-06-15 08:09:50,678 [INFO]   → 0 rows fetched from source.
+2026-06-15 08:09:50,684 [WARNING] No data found in source for d_date=2026-03-15. Exiting.

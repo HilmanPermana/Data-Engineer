@@ -1,0 +1,9 @@
+2026-06-15 08:09:49,383 [INFO] ============================================================
+2026-06-15 08:09:49,383 [INFO] START SYNC  |  d_date=2026-03-15  |  strategy=upsert
+2026-06-15 08:09:49,383 [INFO]   Source : cvm_data.top_main_level_mtd  @  10.54.18.204
+2026-06-15 08:09:49,383 [INFO]   Target : cvm.top_main_level_mtd  @  localhost
+2026-06-15 08:09:49,383 [INFO] ============================================================
+2026-06-15 08:09:49,691 [INFO] Fetching source data for d_date = 2026-03-15 ...
+2026-06-15 08:09:49,724 [INFO]   → 33 rows fetched from source.
+2026-06-15 08:09:49,741 [INFO]   → Upserted batch 1: 33/33 rows
+2026-06-15 08:09:49,742 [INFO] SYNC COMPLETE  |  33 rows synced for d_date=2026-03-15

@@ -1,0 +1,32 @@
+[2026-06-15 07:56:48] ============================================================
+[2026-06-15 07:56:48] ETL RUNNER STARTED
+[2026-06-15 07:56:48] Working directory : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script
+[2026-06-15 07:56:48] Runner log        : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_runner_20260615_075648.log
+[2026-06-15 07:56:48] Arguments         : --date 2026-03-31 
+[2026-06-15 07:56:49] ============================================================
+[2026-06-15 07:56:49] 
+[2026-06-15 07:56:49] ▶ Running : etl_top_main_level_mtd.py
+[2026-06-15 07:56:49]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_mtd_20260615_075648.log
+C:\Python311\python.exe: can't open file 'C:\\Users\\Hilman\\Documents\\NTI\\Telco\\Project\\WAP': [Errno 2] No such file or directory
+[2026-06-15 07:56:49]   [FAILED] etl_top_main_level_mtd.py failed after 0s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_mtd_20260615_075648.log
+[2026-06-15 07:56:49] 
+[2026-06-15 07:56:49] ▶ Running : etl_top_main_level_l1_mtd.py
+[2026-06-15 07:56:49]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_l1_mtd_20260615_075648.log
+C:\Python311\python.exe: can't open file 'C:\\Users\\Hilman\\Documents\\NTI\\Telco\\Project\\WAP': [Errno 2] No such file or directory
+[2026-06-15 07:56:50]   [FAILED] etl_top_main_level_l1_mtd.py failed after 1s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_top_main_level_l1_mtd_20260615_075648.log
+[2026-06-15 07:56:50] 
+[2026-06-15 07:56:50] ▶ Running : etl_summary_channel_mtd.py
+[2026-06-15 07:56:50]   Script log : /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_summary_channel_mtd_20260615_075648.log
+C:\Python311\python.exe: can't open file 'C:\\Users\\Hilman\\Documents\\NTI\\Telco\\Project\\WAP': [Errno 2] No such file or directory
+[2026-06-15 07:56:50]   [FAILED] etl_summary_channel_mtd.py failed after 0s — check log: /c/Users/Hilman/Documents/NTI/Telco/Project/WAP ALSYS/Script/CVM/Script/logs/etl_summary_channel_mtd_20260615_075648.log
+[2026-06-15 07:56:50] 
+[2026-06-15 07:56:50] ============================================================
+[2026-06-15 07:56:50] ETL RUNNER FINISHED
+[2026-06-15 07:56:50]   Total   : 3
+[2026-06-15 07:56:50]   Success : 0
+[2026-06-15 07:56:51]   Failed  : 3
+[2026-06-15 07:56:51]   Failed scripts:
+[2026-06-15 07:56:51]     - etl_top_main_level_mtd.py
+[2026-06-15 07:56:51]     - etl_top_main_level_l1_mtd.py
+[2026-06-15 07:56:51]     - etl_summary_channel_mtd.py
+[2026-06-15 07:56:51] ============================================================

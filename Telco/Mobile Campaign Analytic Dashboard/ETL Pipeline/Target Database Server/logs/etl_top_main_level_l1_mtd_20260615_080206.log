@@ -1,0 +1,75 @@
+2026-06-15 08:02:08,977 [INFO] ============================================================
+2026-06-15 08:02:08,977 [INFO] START SYNC  |  d_date=2026-03-31  |  strategy=upsert
+2026-06-15 08:02:08,977 [INFO]   Source : cvm_data.top_main_level_l1_mtd  @  10.54.18.204
+2026-06-15 08:02:08,977 [INFO]   Target : cvm.top_main_level_l1_mtd  @  localhost
+2026-06-15 08:02:08,977 [INFO] ============================================================
+2026-06-15 08:02:09,251 [INFO] Fetching source data for d_date = 2026-03-31 ...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python311\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 257, in <module>
+    sync_by_d_date(d_date=args.date, strategy=args.strategy)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 164, in sync_by_d_date
+    rows = fetch_source_data(src_conn, d_date)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 108, in fetch_source_data
+    logger.info(f"  \u2192 {len(rows):,} rows fetched from source.")
+Message: '  \u2192 708 rows fetched from source.'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python311\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 257, in <module>
+    sync_by_d_date(d_date=args.date, strategy=args.strategy)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 164, in sync_by_d_date
+    rows = fetch_source_data(src_conn, d_date)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 108, in fetch_source_data
+    logger.info(f"  \u2192 {len(rows):,} rows fetched from source.")
+Message: '  \u2192 708 rows fetched from source.'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python311\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 257, in <module>
+    sync_by_d_date(d_date=args.date, strategy=args.strategy)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 181, in sync_by_d_date
+    inserted = upsert_target_data(tgt_conn, rows)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 146, in upsert_target_data
+    logger.info(f"  \u2192 Upserted batch {i // batch_size + 1}: {total:,}/{len(rows):,} rows")
+Message: '  \u2192 Upserted batch 1: 708/708 rows'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python311\Lib\logging\__init__.py", line 1113, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Python311\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 33: character maps to <undefined>
+Call stack:
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 257, in <module>
+    sync_by_d_date(d_date=args.date, strategy=args.strategy)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 181, in sync_by_d_date
+    inserted = upsert_target_data(tgt_conn, rows)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_top_main_level_l1_mtd.py", line 146, in upsert_target_data
+    logger.info(f"  \u2192 Upserted batch {i // batch_size + 1}: {total:,}/{len(rows):,} rows")
+Message: '  \u2192 Upserted batch 1: 708/708 rows'
+Arguments: ()
+2026-06-15 08:02:09,437 [INFO] SYNC COMPLETE  |  708 rows synced for d_date=2026-03-31

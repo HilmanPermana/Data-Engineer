@@ -1,0 +1,37 @@
+2026-06-15 08:09:51,295 [INFO] ============================================================
+2026-06-15 08:09:51,303 [INFO] START SYNC  |  d_date=2026-03-15  |  strategy=upsert
+2026-06-15 08:09:51,303 [INFO]   Source : cvm_data.summary_channel_mtd  @  10.54.18.204
+2026-06-15 08:09:51,303 [INFO]   Target : cvm.summary_channel_mtd  @  localhost
+2026-06-15 08:09:51,303 [INFO] ============================================================
+2026-06-15 08:09:51,580 [INFO] Fetching source data for d_date = 2026-03-15 ...
+2026-06-15 08:09:51,639 [INFO]   → 94 rows fetched from source.
+2026-06-15 08:09:51,655 [ERROR] Error during sync: 'revenue/taker'
+Traceback (most recent call last):
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 184, in sync_by_d_date
+    inserted = upsert_target_data(tgt_conn, rows)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 147, in upsert_target_data
+    psycopg2.extras.execute_batch(cur, query, batch, page_size=batch_size)
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in execute_batch
+    sqls = [cur.mogrify(sql, args) for args in page]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in <listcomp>
+    sqls = [cur.mogrify(sql, args) for args in page]
+            ^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'revenue/taker'
+2026-06-15 08:09:51,678 [INFO] Target transaction rolled back.
+Traceback (most recent call last):
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 260, in <module>
+    sync_by_d_date(d_date=args.date, strategy=args.strategy)
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 184, in sync_by_d_date
+    inserted = upsert_target_data(tgt_conn, rows)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hilman\Documents\NTI\Telco\Project\WAP ALSYS\Script\CVM\Script\etl_summary_channel_mtd.py", line 147, in upsert_target_data
+    psycopg2.extras.execute_batch(cur, query, batch, page_size=batch_size)
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in execute_batch
+    sqls = [cur.mogrify(sql, args) for args in page]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\psycopg2\extras.py", line 1215, in <listcomp>
+    sqls = [cur.mogrify(sql, args) for args in page]
+            ^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'revenue/taker'
